@@ -13,17 +13,16 @@ nsp-audit-shrinkwrap
 
 ```javascript
 var nspShrinkwrap  = require('nsp-audit-shrinkwrap');
-var shrinkwrapPath = '/path/to/npm-shrinkwrap.json'
+var shrinkwrapPath = '/path/to/npm-shrinkwrap.json';
 var shrinkwrapFile = fs.readFileSync(shrinkwrapPath);
-
 
 nspShrinkwrap.audit(shrinkwrapFile, function (err, results){
     console.log(results);
-};
+});
 
 nspShrinkwrap.auditByPath(shrinkwrapPath, function (err, results){
     console.log(results);
-};
+});
 ```
 
 ## Stream of npm-shrinkwrap.json
